@@ -1,9 +1,9 @@
 replicaCount: 2
 
 image:
-  repository: cloudketan/node-gitops
+  repository: cloudketan/nodejs-argocd
   pullPolicy: Always
-  tag: "v1"
+  tag: "5c9e65"
 
 service:
   type: NodePort
