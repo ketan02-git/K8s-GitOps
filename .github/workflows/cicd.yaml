@@ -36,7 +36,7 @@ jobs:
 
       - name: Update Helm chart
         run: |
-          IMAGE_NAME="my-app"
+          IMAGE_NAME="nodejs-argocd"
           TAG=${GITHUB_SHA::6}
           sed -i "s|tag:.*|tag: \"$TAG\"|g" helm-chart/values.yaml
 
