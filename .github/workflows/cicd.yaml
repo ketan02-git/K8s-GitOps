@@ -30,7 +30,7 @@ jobs:
 
       - name: Push Docker image
         run: |
-          IMAGE_NAME="my-app"
+          IMAGE_NAME="nodejs-argocd"
           TAG=${GITHUB_SHA::6}
           docker push $IMAGE_NAME:$TAG
 
