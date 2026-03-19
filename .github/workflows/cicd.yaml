@@ -24,19 +24,19 @@ jobs:
 
       - name: Build Docker image
         run: |
-          IMAGE_NAME="nodejs-argocd"
+          IMAGE_NAME="cloudketan/nodejs-argocd"
           TAG=${GITHUB_SHA::6}
           docker build -t $IMAGE_NAME:$TAG .
 
       - name: Push Docker image
         run: |
-          IMAGE_NAME="nodejs-argocd"
+          IMAGE_NAME="cloudketan/nodejs-argocd"
           TAG=${GITHUB_SHA::6}
           docker push $IMAGE_NAME:$TAG
 
       - name: Update Helm chart
         run: |
-          IMAGE_NAME="nodejs-argocd"
+          IMAGE_NAME="cloudketan/nodejs-argocd"
           TAG=${GITHUB_SHA::6}
           sed -i "s|tag:.*|tag: \"$TAG\"|g" helm-chart/values.yaml
 
